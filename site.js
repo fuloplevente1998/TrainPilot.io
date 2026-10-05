@@ -87,5 +87,47 @@ if(toggle&&nav){
   }));
   addEventListener("resize",()=>{if(innerWidth>760){nav.classList.remove("open");toggle.setAttribute("aria-expanded","false");}});
 }
+
+function openHashDetails(){
+  const id=location.hash.slice(1);
+  if(!id) return;
+  const target=document.getElementById(id);
+  if(!target) return;
+  const details=target.matches("details")?target:target.closest("details");
+  if(details) details.open=true;
+  setTimeout(()=>target.scrollIntoView({behavior:"smooth",block:"start"}),30);
+}
+addEventListener("hashchange",openHashDetails);
+document.querySelectorAll('a[href="#support"],a[href="#privacy"]').forEach(a=>a.addEventListener("click",()=>setTimeout(openHashDetails,0)));
+
+const lightbox=document.getElementById("gallery-lightbox");
+if(lightbox){
+  const lightboxImg=lightbox.querySelector(".lightbox-viewport img");
+  const lightboxCaption=lightbox.querySelector(".lightbox-caption");
+  const closeBtn=lightbox.querySelector(".lightbox-close");
+  document.querySelectorAll(".gallery-card").forEach(card=>{
+    const view=card.querySelector(".gallery-viewport");
+    const img=card.querySelector("img");
+    if(!view||!img) return;
+    view.setAttribute("role","button");
+    view.setAttribute("tabindex","0");
+    view.setAttribute("aria-label",img.alt||"Open screenshot");
+    const open=()=>{
+      lightboxImg.src=img.src;
+      lightboxImg.alt=img.alt;
+      lightboxCaption.textContent=card.querySelector("figcaption")?.textContent||"";
+      lightbox.showModal();
+      document.body.style.overflow="hidden";
+    };
+    view.addEventListener("click",open);
+    view.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});
+  });
+  const close=()=>{lightbox.close();document.body.style.overflow="";};
+  closeBtn?.addEventListener("click",close);
+  lightbox.addEventListener("click",e=>{if(e.target===lightbox) close();});
+  lightbox.addEventListener("close",()=>{document.body.style.overflow="";lightboxImg.src="";});
+}
+
 applyLanguage(lang);
+openHashDetails();
 })();
