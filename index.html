@@ -2,77 +2,183 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090c11">
 <meta name="description" content="FulTech Studios — independent Android software. Home of TrainPilot, a local-first workout planner, training journal and progress companion.">
-<meta name="theme-color" content="#0b0e14">
 <meta property="og:title" content="FulTech Studios — TrainPilot">
 <meta property="og:description" content="Plan workouts, track progress and connect optional health data with TrainPilot.">
 <title>FulTech Studios — TrainPilot</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/styles.css?v=4">
+<script defer src="/site.js?v=4"></script>
 </head>
-<body>
-<header class="site-nav"><div class="wrap nav-inner">
-<a class="brand" href="/"><img class="brand-icon" src="/assets/trainpilot-logo.svg" alt=""><span>FulTech Studios</span></a>
-<nav class="links"><a href="#trainpilot">TrainPilot</a><a href="#screenshots">Screenshots</a><a href="/privacy.html">Privacy</a><a href="/support.html">Support</a></nav>
-</div></header>
+<body data-page="home">
+<header class="site-nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/" aria-label="FulTech Studios home">
+      <img class="brand-icon" src="/assets/trainpilot-logo.svg" alt="">
+      <span>FulTech Studios</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="primary-nav">
+      <a href="#trainpilot" data-i18n="nav.trainpilot">TrainPilot</a>
+      <a href="#screenshots" data-i18n="nav.screenshots">Screenshots</a>
+      <a href="/privacy.html" data-i18n="nav.privacy">Privacy</a>
+      <a href="/support.html" data-i18n="nav.support">Support</a>
+      <label class="lang-wrap">
+        <span class="sr-only" data-i18n="nav.language">Language</span>
+        <select class="lang-select" aria-label="Language">
+          <option value="en">EN</option>
+          <option value="hu">HU</option>
+          <option value="de">DE</option>
+          <option value="ro">RO</option>
+        </select>
+      </label>
+    </nav>
+  </div>
+</header>
 
 <main>
-<section class="hero"><div class="wrap hero-grid">
-  <div class="hero-copy">
-    <span class="eyebrow">FulTech Studios · Android</span>
-    <div class="trainpilot-lockup"><img src="/assets/trainpilot-logo.svg" alt="TrainPilot dumbbell logo"><div><span class="tp-name">Train<span>Pilot</span></span><span class="tp-tagline">Plan · Train · Track</span></div></div>
-    <h1>Training that stays organized.</h1>
-    <p class="lead">TrainPilot combines workout planning, an editable training journal, progress tracking, calendar tools and optional Health Connect integration in one local-first Android app.</p>
-    <div class="actions"><a class="btn primary" href="#screenshots">See the app</a><a class="btn secondary" href="/privacy.html">Privacy policy</a></div>
-  </div>
-  <div class="phone-stack" aria-label="TrainPilot app preview">
-    <figure class="phone-shot phone-home"><img src="/assets/home.jpg" alt="TrainPilot home screen"></figure>
-    <figure class="phone-shot phone-coach"><img src="/assets/coach-readiness.jpg" alt="TrainPilot Coach readiness screen"></figure>
-  </div>
-</div></section>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow" data-i18n="home.eyebrow">FULTECH STUDIOS · ANDROID</span>
 
-<section class="section" id="trainpilot"><div class="wrap product">
-  <div class="product-panel">
-    <div class="product-title"><img src="/assets/trainpilot-logo.svg" alt=""><div><span class="eyebrow">TrainPilot</span><h2>Plan. Train. Track. Improve.</h2></div></div>
-    <p class="muted">Build custom workout programs, record active sessions, review your history and use optional health signals for additional training context. Core workout data remains local to the device unless you explicitly use an optional integration or export.</p>
-    <div class="actions"><a class="btn primary" href="/support.html">Support</a><a class="btn secondary" href="/privacy.html">How data is handled</a></div>
-  </div>
-  <div class="stat-list">
-    <div class="stat"><span>Platform</span><b>Android</b></div>
-    <div class="stat"><span>Core storage</span><b>Local-first</b></div>
-    <div class="stat"><span>Health Connect</span><b>Optional</b></div>
-    <div class="stat"><span>Google services</span><b>Optional</b></div>
-  </div>
-</div></section>
+      <div class="trainpilot-lockup">
+        <img src="/assets/trainpilot-logo.svg" alt="TrainPilot">
+        <div>
+          <span class="tp-name">Train<span>Pilot</span></span>
+          <span class="tp-tagline" data-i18n="home.tagline">Plan · Train · Track</span>
+        </div>
+      </div>
 
-<section class="section" id="screenshots"><div class="wrap">
-  <span class="eyebrow">Inside TrainPilot</span>
-  <h2 style="margin-top:16px">A focused training workspace.</h2>
-  <p class="lead">Representative screens from the current TrainPilot interface.</p>
-  <div class="screenshots">
-    <figure class="screenshot-card"><img src="/assets/home.jpg" alt="TrainPilot personal workout planner home screen"><figcaption><strong>Home overview</strong><span>Programs, today’s status and the next workout in one place.</span></figcaption></figure>
-    <figure class="screenshot-card"><img src="/assets/coach-readiness.jpg" alt="TrainPilot Coach readiness details"><figcaption><strong>Coach readiness</strong><span>See which available signals affect the current training readiness view.</span></figcaption></figure>
-  </div>
-</div></section>
+      <h1 data-i18n="home.heroTitle">Training that stays organized.</h1>
+      <p class="lead" data-i18n="home.heroText">TrainPilot combines workout planning, an editable training journal, progress tracking, calendar tools and optional Health Connect integration in one local-first Android app.</p>
 
-<section class="section"><div class="wrap">
-  <h2>What TrainPilot covers</h2>
-  <div class="grid">
-    <article class="card"><h3>Workout planning</h3><p>Create programs, run quick workouts and plan sessions on a training calendar.</p></article>
-    <article class="card"><h3>Progress tracking</h3><p>Keep an editable workout journal with training history, personal records and progress views.</p></article>
-    <article class="card"><h3>Health Connect</h3><p>Optionally connect permitted fitness and health signals for summaries, recovery context and training guidance.</p></article>
-    <article class="card"><h3>Distance activities</h3><p>Use manual distance entry, timing and optional foreground GPS measurement for supported activities.</p></article>
-    <article class="card"><h3>Private by design</h3><p>Core workout data is stored on-device. Cloud and health integrations are optional and permission-gated.</p></article>
-    <article class="card"><h3>Multilingual</h3><p>Hungarian, English, German and Romanian interfaces are supported.</p></article>
-  </div>
-</div></section>
+      <div class="actions">
+        <a class="btn primary" href="#screenshots" data-i18n="home.seeApp">See the app</a>
+        <a class="btn secondary" href="/privacy.html" data-i18n="home.privacyBtn">Privacy policy</a>
+      </div>
+    </div>
 
-<section class="section"><div class="wrap privacy-band">
-  <div><span class="eyebrow">Privacy</span><h2>No ads. No data sales.</h2><p class="lead">TrainPilot currently has no advertising and no developer-operated analytics/data-collection server. Optional integrations are controlled by the user.</p></div>
-  <div class="actions"><a class="btn primary" href="/privacy.html">Read privacy policy</a><a class="btn secondary" href="mailto:fultechstudios@gmail.com">fultechstudios@gmail.com</a></div>
-</div></section>
+    <div class="hero-visual" aria-label="TrainPilot app preview">
+      <div class="glow-orb" aria-hidden="true"></div>
+      <figure class="device device-main">
+        <div class="device-camera" aria-hidden="true"></div>
+        <img src="/assets/home.jpg" alt="TrainPilot home screen">
+      </figure>
+      <figure class="device device-side">
+        <div class="device-camera" aria-hidden="true"></div>
+        <img src="/assets/coach-readiness.jpg" alt="TrainPilot Coach readiness screen">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section product-section" id="trainpilot">
+  <div class="wrap">
+    <div class="section-heading">
+      <span class="eyebrow" data-i18n="home.productEyebrow">TRAINPILOT</span>
+      <h2 data-i18n="home.productTitle">Plan. Train. Track. Improve.</h2>
+      <p class="lead" data-i18n="home.productText">Build custom workout programs, record active sessions, review your history and use optional health signals for additional training context.</p>
+    </div>
+
+    <div class="product-grid">
+      <article class="feature-main">
+        <div class="feature-brand">
+          <img src="/assets/trainpilot-logo.svg" alt="">
+          <div>
+            <strong>TrainPilot</strong>
+            <span data-i18n="home.localFirst">Local-first Android training companion</span>
+          </div>
+        </div>
+        <p data-i18n="home.featureMainText">Core workout data stays on your device unless you explicitly use an optional integration or export. Health Connect and Google features are permission-gated.</p>
+        <div class="actions">
+          <a class="btn primary" href="/support.html" data-i18n="nav.support">Support</a>
+          <a class="btn secondary" href="/privacy.html" data-i18n="home.dataHandling">How data is handled</a>
+        </div>
+      </article>
+
+      <div class="facts-grid">
+        <div class="fact"><span data-i18n="home.platform">Platform</span><b>Android</b></div>
+        <div class="fact"><span data-i18n="home.storage">Core storage</span><b data-i18n="home.localFirstValue">Local-first</b></div>
+        <div class="fact"><span>Health Connect</span><b data-i18n="home.optional">Optional</b></div>
+        <div class="fact"><span data-i18n="home.googleServices">Google services</span><b data-i18n="home.optional">Optional</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="screenshots">
+  <div class="wrap">
+    <div class="section-heading compact">
+      <span class="eyebrow" data-i18n="home.insideEyebrow">INSIDE TRAINPILOT</span>
+      <h2 data-i18n="home.insideTitle">A focused training workspace.</h2>
+      <p class="lead" data-i18n="home.insideText">Representative screens from the current TrainPilot interface.</p>
+    </div>
+
+    <div class="screenshot-grid">
+      <figure class="screenshot-card">
+        <div class="screen-frame"><img src="/assets/home.jpg" alt="TrainPilot home screen"></div>
+        <figcaption>
+          <strong data-i18n="home.screenHomeTitle">Home overview</strong>
+          <span data-i18n="home.screenHomeText">Programs, today's status and the next workout in one place.</span>
+        </figcaption>
+      </figure>
+
+      <figure class="screenshot-card">
+        <div class="screen-frame"><img src="/assets/coach-readiness.jpg" alt="TrainPilot Coach readiness screen"></div>
+        <figcaption>
+          <strong data-i18n="home.screenCoachTitle">Coach readiness</strong>
+          <span data-i18n="home.screenCoachText">See which available signals affect the current training readiness view.</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-heading compact">
+      <span class="eyebrow" data-i18n="home.featuresEyebrow">FEATURES</span>
+      <h2 data-i18n="home.featuresTitle">Built for everyday training.</h2>
+    </div>
+
+    <div class="feature-grid">
+      <article class="card"><span class="card-icon">01</span><h3 data-i18n="home.f1Title">Workout planning</h3><p data-i18n="home.f1Text">Create programs, run quick workouts and plan sessions on a training calendar.</p></article>
+      <article class="card"><span class="card-icon">02</span><h3 data-i18n="home.f2Title">Progress tracking</h3><p data-i18n="home.f2Text">Keep an editable workout journal with training history, personal records and progress views.</p></article>
+      <article class="card"><span class="card-icon">03</span><h3>Health Connect</h3><p data-i18n="home.f3Text">Optionally connect permitted fitness and health signals for summaries, recovery context and training guidance.</p></article>
+      <article class="card"><span class="card-icon">04</span><h3 data-i18n="home.f4Title">Distance activities</h3><p data-i18n="home.f4Text">Use manual distance entry, timing and optional foreground GPS measurement for supported activities.</p></article>
+      <article class="card"><span class="card-icon">05</span><h3 data-i18n="home.f5Title">Private by design</h3><p data-i18n="home.f5Text">Core workout data is stored on-device. Cloud and health integrations are optional and permission-gated.</p></article>
+      <article class="card"><span class="card-icon">06</span><h3 data-i18n="home.f6Title">Multilingual</h3><p data-i18n="home.f6Text">Hungarian, English, German and Romanian interfaces are supported.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap privacy-band">
+    <div>
+      <span class="eyebrow" data-i18n="nav.privacy">Privacy</span>
+      <h2 data-i18n="home.privacyTitle">No ads. No data sales.</h2>
+      <p class="lead" data-i18n="home.privacyText">TrainPilot currently has no advertising and no developer-operated analytics/data-collection server. Optional integrations are controlled by the user.</p>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="/privacy.html" data-i18n="home.readPrivacy">Read privacy policy</a>
+      <a class="btn secondary" href="mailto:fultechstudios@gmail.com">fultechstudios@gmail.com</a>
+    </div>
+  </div>
+</section>
 </main>
 
-<footer><div class="wrap footer-inner"><span>© 2026 FulTech Studios. All rights reserved.</span><span class="small">Support: <a href="mailto:fultechstudios@gmail.com">fultechstudios@gmail.com</a> · No analytics · No tracking cookies</span></div></footer>
-</body></html>
+<footer>
+  <div class="wrap footer-inner">
+    <span>© 2026 FulTech Studios. <span data-i18n="footer.rights">All rights reserved.</span></span>
+    <span class="small"><span data-i18n="footer.support">Support</span>: <a href="mailto:fultechstudios@gmail.com">fultechstudios@gmail.com</a> · <span data-i18n="footer.noTracking">No analytics · No tracking cookies</span></span>
+  </div>
+</footer>
+</body>
+</html>
