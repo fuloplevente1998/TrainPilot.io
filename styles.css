@@ -18,6 +18,11 @@ footer{border-top:1px solid rgba(255,255,255,.06);padding:28px 0 42px;color:var(
 .gallery-scroll{display:flex;gap:16px;overflow-x:auto;padding-bottom:24px;scroll-snap-type:x mandatory}
 .gallery-item{min-width:280px;width:280px;height:520px;border-radius:24px;overflow:hidden;scroll-snap-align:center;box-shadow:0 15px 40px rgba(0,0,0,.3);background:#0b0e14;position:relative}
 .gallery-item img{width:100%;position:absolute;top:-135px}
+.support-details summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:24px;background:var(--panel);border:1px solid var(--line);border-radius:18px;transition:all .2s ease}
+.support-details summary::-webkit-details-marker{display:none}
+.support-details summary h2{margin:0;font-size:24px;display:flex;width:100%;justify-content:space-between;align-items:center}
+.support-details[open] summary{border-bottom-left-radius:0;border-bottom-right-radius:0;border-bottom-color:transparent}
+.support-content{padding:0 24px 24px;background:var(--panel);border:1px solid var(--line);border-top:none;border-bottom-left-radius:18px;border-bottom-right-radius:18px}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-image{margin-top:32px}.grid{grid-template-columns:1fr 1fr}.product{grid-template-columns:1fr}.privacy-band{align-items:flex-start;flex-direction:column}.hero{padding-top:64px}}
 @media(max-width:680px){nav .links a:nth-child(1),nav .links a:nth-child(2){display:none}.screenshots{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.trainpilot-lockup img{width:68px;height:68px}.tp-name{font-size:38px}}
 @media(max-width:520px){.wrap{width:min(var(--max),calc(100% - 28px))}.nav-inner{height:64px}nav .links{gap:12px;font-size:14px}.brand span{display:none}.hero{padding-top:52px}}
