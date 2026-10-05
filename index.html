@@ -9,134 +9,117 @@
 <meta property="og:description" content="Plan workouts, track progress and connect optional health data with TrainPilot.">
 <title>FulTech Studios — TrainPilot</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/styles.css?v=4">
+<link rel="stylesheet" href="/styles.css?v=5">
 <script defer src="/site.js?v=4"></script>
 </head>
 <body data-page="home">
-<header class="site-nav">
-  <div class="wrap nav-inner">
-    <a class="brand" href="/" aria-label="FulTech Studios home">
-      <img class="brand-icon" src="/assets/trainpilot-logo.svg" alt="">
-      <span>FulTech Studios</span>
+
+<nav class="bottom-nav" aria-label="Primary navigation">
+  <div class="bottom-nav-inner">
+    <a href="#gallery" class="nav-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2ZM8.5 13.5 11 16.51 14.5 12l4.5 6H5l3.5-4.5Z"/></svg>
+      <span data-i18n="nav.screenshots">Screenshots</span>
     </a>
-
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="nav-links" id="primary-nav">
-      <a href="#trainpilot" data-i18n="nav.trainpilot">TrainPilot</a>
-      <a href="#screenshots" data-i18n="nav.screenshots">Screenshots</a>
-      <a href="/privacy.html" data-i18n="nav.privacy">Privacy</a>
-      <a href="/support.html" data-i18n="nav.support">Support</a>
-      <label class="lang-wrap">
-        <span class="sr-only" data-i18n="nav.language">Language</span>
-        <select class="lang-select" aria-label="Language">
-          <option value="en">EN</option>
-          <option value="hu">HU</option>
-          <option value="de">DE</option>
-          <option value="ro">RO</option>
-        </select>
-      </label>
-    </nav>
+    <a href="#trainpilot" class="nav-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm-1 7V3.5L18.5 9H13Z"/></svg>
+      <span data-i18n="nav.trainpilot">TrainPilot</span>
+    </a>
+    <a href="/privacy.html" class="nav-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V5l-8-3Zm0 18.9c-2.78-1.15-6-5.48-6-9.9V6.3l6-2.25 6 2.25V11c0 4.42-3.22 8.75-6 9.9Z"/></svg>
+      <span data-i18n="nav.privacy">Privacy</span>
+    </a>
+    <a href="/support.html" class="nav-item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 18h2v-2h-2v2Zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm0-14a4 4 0 0 0-4 4h2a2 2 0 1 1 4 0c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5a4 4 0 0 0-4-4Z"/></svg>
+      <span data-i18n="nav.support">Support</span>
+    </a>
+    <label class="nav-item lang-item">
+      <span class="sr-only" data-i18n="nav.language">Language</span>
+      <select class="lang-select" aria-label="Language">
+        <option value="en">EN</option>
+        <option value="hu">HU</option>
+        <option value="de">DE</option>
+        <option value="ro">RO</option>
+      </select>
+    </label>
   </div>
-</header>
+</nav>
 
 <main>
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="eyebrow" data-i18n="home.eyebrow">FULTECH STUDIOS · ANDROID</span>
-
       <div class="trainpilot-lockup">
-        <img src="/assets/trainpilot-logo.svg" alt="TrainPilot">
+        <img src="/assets/logo.jpg" alt="TrainPilot">
         <div>
           <span class="tp-name">Train<span>Pilot</span></span>
           <span class="tp-tagline" data-i18n="home.tagline">Plan · Train · Track</span>
         </div>
       </div>
-
       <h1 data-i18n="home.heroTitle">Training that stays organized.</h1>
       <p class="lead" data-i18n="home.heroText">TrainPilot combines workout planning, an editable training journal, progress tracking, calendar tools and optional Health Connect integration in one local-first Android app.</p>
-
       <div class="actions">
-        <a class="btn primary" href="#screenshots" data-i18n="home.seeApp">See the app</a>
+        <a class="btn primary" href="#gallery" data-i18n="home.seeApp">See the app</a>
         <a class="btn secondary" href="/privacy.html" data-i18n="home.privacyBtn">Privacy policy</a>
       </div>
     </div>
 
-    <div class="hero-visual" aria-label="TrainPilot app preview">
-      <div class="glow-orb" aria-hidden="true"></div>
-      <figure class="device device-main">
-        <div class="device-camera" aria-hidden="true"></div>
-        <img src="/assets/home.jpg" alt="TrainPilot home screen">
-      </figure>
-      <figure class="device device-side">
-        <div class="device-camera" aria-hidden="true"></div>
-        <img src="/assets/coach-readiness.jpg" alt="TrainPilot Coach readiness screen">
-      </figure>
+    <div class="hero-image">
+      <img src="/assets/promo-square.jpg" alt="TrainPilot application preview">
     </div>
   </div>
 </section>
 
 <section class="section product-section" id="trainpilot">
-  <div class="wrap">
-    <div class="section-heading">
-      <span class="eyebrow" data-i18n="home.productEyebrow">TRAINPILOT</span>
-      <h2 data-i18n="home.productTitle">Plan. Train. Track. Improve.</h2>
-      <p class="lead" data-i18n="home.productText">Build custom workout programs, record active sessions, review your history and use optional health signals for additional training context.</p>
-    </div>
-
-    <div class="product-grid">
-      <article class="feature-main">
-        <div class="feature-brand">
-          <img src="/assets/trainpilot-logo.svg" alt="">
-          <div>
-            <strong>TrainPilot</strong>
-            <span data-i18n="home.localFirst">Local-first Android training companion</span>
-          </div>
+  <div class="wrap product-grid">
+    <article class="product-panel">
+      <div class="product-title">
+        <img src="/assets/logo.jpg" alt="">
+        <div>
+          <span class="eyebrow" data-i18n="home.productEyebrow">TRAINPILOT</span>
+          <h2 data-i18n="home.productTitle">Plan. Train. Track. Improve.</h2>
         </div>
-        <p data-i18n="home.featureMainText">Core workout data stays on your device unless you explicitly use an optional integration or export. Health Connect and Google features are permission-gated.</p>
-        <div class="actions">
-          <a class="btn primary" href="/support.html" data-i18n="nav.support">Support</a>
-          <a class="btn secondary" href="/privacy.html" data-i18n="home.dataHandling">How data is handled</a>
-        </div>
-      </article>
-
-      <div class="facts-grid">
-        <div class="fact"><span data-i18n="home.platform">Platform</span><b>Android</b></div>
-        <div class="fact"><span data-i18n="home.storage">Core storage</span><b data-i18n="home.localFirstValue">Local-first</b></div>
-        <div class="fact"><span>Health Connect</span><b data-i18n="home.optional">Optional</b></div>
-        <div class="fact"><span data-i18n="home.googleServices">Google services</span><b data-i18n="home.optional">Optional</b></div>
       </div>
+      <p class="muted" data-i18n="home.productText">Build custom workout programs, record active sessions, review your history and use optional health signals for additional training context.</p>
+      <p class="muted" data-i18n="home.featureMainText">Core workout data stays on your device unless you explicitly use an optional integration or export. Health Connect and Google features are permission-gated.</p>
+      <div class="actions">
+        <a class="btn primary" href="/support.html" data-i18n="nav.support">Support</a>
+        <a class="btn secondary" href="/privacy.html" data-i18n="home.dataHandling">How data is handled</a>
+      </div>
+    </article>
+
+    <div class="facts-grid">
+      <div class="fact"><span data-i18n="home.platform">Platform</span><b>Android</b></div>
+      <div class="fact"><span data-i18n="home.storage">Core storage</span><b data-i18n="home.localFirstValue">Local-first</b></div>
+      <div class="fact"><span>Health Connect</span><b data-i18n="home.optional">Optional</b></div>
+      <div class="fact"><span data-i18n="home.googleServices">Google services</span><b data-i18n="home.optional">Optional</b></div>
     </div>
   </div>
 </section>
 
-<section class="section" id="screenshots">
+<section class="promo-section">
   <div class="wrap">
-    <div class="section-heading compact">
+    <img src="/assets/promo-landscape.jpg" alt="TrainPilot overview" class="promo-landscape">
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="section-heading">
       <span class="eyebrow" data-i18n="home.insideEyebrow">INSIDE TRAINPILOT</span>
       <h2 data-i18n="home.insideTitle">A focused training workspace.</h2>
       <p class="lead" data-i18n="home.insideText">Representative screens from the current TrainPilot interface.</p>
     </div>
 
-    <div class="screenshot-grid">
-      <figure class="screenshot-card">
-        <div class="screen-frame"><img src="/assets/home.jpg" alt="TrainPilot home screen"></div>
-        <figcaption>
-          <strong data-i18n="home.screenHomeTitle">Home overview</strong>
-          <span data-i18n="home.screenHomeText">Programs, today's status and the next workout in one place.</span>
-        </figcaption>
-      </figure>
-
-      <figure class="screenshot-card">
-        <div class="screen-frame"><img src="/assets/coach-readiness.jpg" alt="TrainPilot Coach readiness screen"></div>
-        <figcaption>
-          <strong data-i18n="home.screenCoachTitle">Coach readiness</strong>
-          <span data-i18n="home.screenCoachText">See which available signals affect the current training readiness view.</span>
-        </figcaption>
-      </figure>
+    <div class="gallery-scroll" aria-label="TrainPilot screenshots">
+      <figure class="gallery-card"><img src="/assets/gallery-2.jpg" alt="TrainPilot home"><figcaption data-i18n="home.screenHomeTitle">Home overview</figcaption></figure>
+      <figure class="gallery-card"><img src="/assets/gallery-1.jpg" alt="TrainPilot workout"><figcaption>Workout</figcaption></figure>
+      <figure class="gallery-card"><img src="/assets/gallery-3.jpg" alt="TrainPilot health"><figcaption>Health</figcaption></figure>
+      <figure class="gallery-card"><img src="/assets/gallery-4.jpg" alt="TrainPilot programs"><figcaption>Programs</figcaption></figure>
+      <figure class="gallery-card"><img src="/assets/gallery-8.jpg" alt="TrainPilot journal"><figcaption>Journal</figcaption></figure>
+      <figure class="gallery-card"><img src="/assets/gallery-7.jpg" alt="TrainPilot calendar"><figcaption>Calendar</figcaption></figure>
+      <figure class="gallery-card"><img src="/assets/gallery-6.jpg" alt="TrainPilot Coach"><figcaption data-i18n="home.screenCoachTitle">Coach readiness</figcaption></figure>
+      <figure class="gallery-card"><img src="/assets/gallery-5.jpg" alt="TrainPilot settings"><figcaption>Settings</figcaption></figure>
     </div>
   </div>
 </section>
@@ -147,7 +130,6 @@
       <span class="eyebrow" data-i18n="home.featuresEyebrow">FEATURES</span>
       <h2 data-i18n="home.featuresTitle">Built for everyday training.</h2>
     </div>
-
     <div class="feature-grid">
       <article class="card"><span class="card-icon">01</span><h3 data-i18n="home.f1Title">Workout planning</h3><p data-i18n="home.f1Text">Create programs, run quick workouts and plan sessions on a training calendar.</p></article>
       <article class="card"><span class="card-icon">02</span><h3 data-i18n="home.f2Title">Progress tracking</h3><p data-i18n="home.f2Text">Keep an editable workout journal with training history, personal records and progress views.</p></article>
