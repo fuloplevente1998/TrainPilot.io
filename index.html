@@ -12,10 +12,30 @@
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<header class="site-nav"><div class="wrap nav-inner">
-<a class="brand" href="/"><img class="brand-icon" src="/assets/logo.jpg" alt=""><span>FulTech Studios</span></a>
-<nav class="links"><a href="#trainpilot">TrainPilot</a><a href="#screenshots">Screenshots</a><a href="/privacy.html">Privacy</a><a href="/support.html">Support</a><select class="lang-select" onchange="if(this.value) window.location.href=this.value;" aria-label="Select language"><option value="/" selected>EN</option><option value="/hu/">HU</option><option value="/de/">DE</option><option value="/ro/">RO</option></select></nav>
-</div></header>
+<nav class="bottom-nav">
+  <div class="bottom-nav-inner">
+    <a href="#gallery" class="nav-item">
+      <svg viewBox="0 0 24 24"><path d="M21,19V5c0-1.1-0.9-2-2-2H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14C20.1,21,21,20.1,21,19z M8.5,13.5l2.5,3.01L14.5,12l4.5,6H5L8.5,13.5z"/></svg>
+      <span>Galéria</span>
+    </a>
+    <a href="#trainpilot" class="nav-item">
+      <svg viewBox="0 0 24 24"><path d="M14,2H6C4.9,2,4,2.9,4,4v16c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2V8L14,2z M13,9V3.5L18.5,9H13z"/></svg>
+      <span>Dokumentáció</span>
+    </a>
+    <a href="/support.html" class="nav-item">
+      <svg viewBox="0 0 24 24"><path d="M11,18h2v-2h-2V18z M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z M12,6c-2.21,0-4,1.79-4,4h2c0-1.1,0.9-2,2-2s2,0.9,2,2c0,2-3,1.75-3,5h2c0-2.25,3-2.5,3-5C16,7.79,14.21,6,12,6z"/></svg>
+      <span>Support</span>
+    </a>
+    <div class="nav-item">
+      <select class="lang-select" onchange="if(this.value) window.location.href=this.value;" aria-label="Select language">
+        <option value="/" selected>EN</option>
+        <option value="/hu/">HU</option>
+        <option value="/de/">DE</option>
+        <option value="/ro/">RO</option>
+      </select>
+    </div>
+  </div>
+</nav>
 
 <main>
 <section class="hero"><div class="wrap hero-grid">
@@ -45,14 +65,18 @@
   </div>
 </div></section>
 
-<section class="section" id="screenshots"><div class="wrap">
-  <span class="eyebrow">Inside TrainPilot</span>
-  <h2 style="margin-top:16px">A focused training workspace.</h2>
-  <p class="lead">Representative screens from the current TrainPilot interface.</p>
-  <div class="screenshots" style="display: block;">
-    <figure class="screenshot-card" style="max-width: 100%; margin: 0 auto; padding: 0; background: transparent; border: none; box-shadow: none;">
-      <img src="/assets/promo-landscape.jpg" alt="TrainPilot landscape preview" style="width: 100%; border-radius: 24px; box-shadow: 0 24px 60px rgba(0,0,0,0.25);">
-    </figure>
+<section class="section" id="gallery"><div class="wrap">
+  <span class="eyebrow">Galéria</span>
+  <h2 style="margin-top:16px">Pillantás az alkalmazásba.</h2>
+  <div class="gallery-scroll">
+    <div class="gallery-item"><img src="/assets/gallery-2.jpg" alt="Kezdőlap"></div>
+    <div class="gallery-item"><img src="/assets/gallery-1.jpg" alt="Edzés"></div>
+    <div class="gallery-item"><img src="/assets/gallery-3.jpg" alt="Egészség"></div>
+    <div class="gallery-item"><img src="/assets/gallery-4.jpg" alt="Programok"></div>
+    <div class="gallery-item"><img src="/assets/gallery-8.jpg" alt="Napló"></div>
+    <div class="gallery-item"><img src="/assets/gallery-7.jpg" alt="Naptár"></div>
+    <div class="gallery-item"><img src="/assets/gallery-6.jpg" alt="Coach"></div>
+    <div class="gallery-item"><img src="/assets/gallery-5.jpg" alt="Beállítások"></div>
   </div>
 </div></section>
 
