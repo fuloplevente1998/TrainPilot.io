@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fuloplevente1998.github.io/sitemap.xml
+Sitemap: https://fuloplevente1998.github.io/TrainPilot.io/sitemap.xml
